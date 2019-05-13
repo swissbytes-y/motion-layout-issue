@@ -23,18 +23,15 @@ class MainActivity : AppCompatActivity() {
         val endId = R.id.end
 
         to_start.setOnClickListener {
-            motionLayout.setTransition(R.id.top, R.id.start)
-            motionLayout.transitionToEnd()
+            motionLayout.transitionToState(R.id.start)
         }
 
         to_middle.setOnClickListener {
-            motionLayout.setTransition(R.id.start, R.id.middle)
-            motionLayout.transitionToEnd()
+            motionLayout.transitionToState(R.id.middle)
         }
 
         to_top.setOnClickListener {
-            motionLayout.setTransition(R.id.middle, R.id.top)
-            motionLayout.transitionToEnd()
+            motionLayout.transitionToState(R.id.top)
         }
 
         redirect.setOnClickListener { startActivity(Intent(this, RvActivity::class.java)) }
